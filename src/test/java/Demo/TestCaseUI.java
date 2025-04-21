@@ -24,7 +24,7 @@ public class TestCaseUI {
     public static WebDriver driver;
  //   @Parameters({"environment"})
     @BeforeMethod
-    public static void launchDriver(String env) {
+    public static void launchDriver() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3999));
         driver.manage().window().maximize();
