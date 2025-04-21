@@ -28,7 +28,7 @@ public class TestCaseUI {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3999));
         driver.manage().window().maximize();
-        System.out.println(env);
+//        System.out.println(env);
 
     }
 
