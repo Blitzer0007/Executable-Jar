@@ -22,7 +22,7 @@ import java.util.HashMap;
 public class TestCaseUI {
 
     public static WebDriver driver;
-    @Parameters({"environment"})
+ //   @Parameters({"environment"})
     @BeforeMethod
     public static void launchDriver(String env) {
         driver = new ChromeDriver();
@@ -54,27 +54,27 @@ public class TestCaseUI {
 //        driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + "@hub.browserstack.com/wd/hub"), capabilities);
 //    }
 
-    @Test
-    @Parameters({"methodName"})
-    public void runTest(String methodName) throws InterruptedException {
-        System.out.println(methodName);
+    // @Test
+    // @Parameters({"methodName"})
+    // public void runTest(String methodName) throws InterruptedException {
+    //     System.out.println(methodName);
 
-        switch (methodName) {
-            case "Test1":
-                Test1();
-                break;
-            case "Test2":
-                Test2();
-                break;
-            case "Test3":
-                Test3();
-                break;
-            default:
-                throw new IllegalArgumentException("Unknown method: " + methodName);
-        }
-    }
+    //     switch (methodName) {
+    //         case "Test1":
+    //             Test1();
+    //             break;
+    //         case "Test2":
+    //             Test2();
+    //             break;
+    //         case "Test3":
+    //             Test3();
+    //             break;
+    //         default:
+    //             throw new IllegalArgumentException("Unknown method: " + methodName);
+    //     }
+    // }
 
- //   @Test(groups = {"Test1"})
+    @Test(groups = {"Test1"})
     public void Test1() {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         driver.get("http://demo.guru99.com/test/drag_drop.html");
