@@ -29,7 +29,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Run Maven tests
-        run: mvn test
+        run: mvn test surefire-report:report -DoutputDirectory=surefire-report
       - name: Upload Test Report Artifact
         uses: actions/upload-artifact@v4
         with:
